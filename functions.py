@@ -14,14 +14,14 @@ planetNum = 0
 def initGame():
     pygame.init()
     pygame.font.init()
-    myfont = pygame.font.Font('Roboto-Thin.ttf', 20)
+    font = pygame.font.Font('Roboto-Thin.ttf', 20)
     clock.tick(30)
     screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
     background = pygame.Surface(screen.get_size())
     background.fill(bgColor)
     while True:
         checkEvents(background)
-        updateScreen(screen, background, myfont)
+        updateScreen(screen, background, font)
         if mouseClick:
             try:
                 planets[-1].grow()

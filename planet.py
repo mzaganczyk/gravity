@@ -2,6 +2,7 @@ import pygame
 import random
 import math
 
+
 class Planet:
     def __init__(self, x, y, surface, colors, number):
         self.pos = [x, y]
@@ -37,9 +38,9 @@ class Planet:
     def calcDistance(self, x, y):
         dx = x - self.pos[0]
         dy = y - self.pos[1]
-        dist = math.sqrt(dx**2+dy**2)
-        if dist < 2*self.radius:
-            return 2*self.radius, dx, dy
+        dist = math.sqrt(dx ** 2 + dy ** 2)
+        if dist < 2 * self.radius:
+            return 2 * self.radius, dx, dy
         else:
             return dist, dx, dy
 
